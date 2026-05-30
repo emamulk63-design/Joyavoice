@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>জয়া ভাইয়ের গরম আলোচনা</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f4f6f9}
+header{background:linear-gradient(135deg,#ff512f,#dd2476);color:#fff;text-align:center;padding:25px}
+.banner{width:100%;height:auto;display:block}
+.container{max-width:900px;margin:auto;padding:15px}
+.card{background:#fff;border-radius:16px;padding:15px;margin:12px 0;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.title{font-size:20px;font-weight:bold;color:#dd2476;margin-bottom:10px}
+audio{width:100%}
+footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:20px}
+</style>
+</head>
+<body>
+<header><h1>জয়া ভাইয়ের গরম আলোচনা</h1></header>
+<img class="banner" src="https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/1780158808253.png" alt="banner">
+<div class="container" id="audioList"></div>
+<footer>© 2026 জয়া ভাইয়ের গরম আলোচনা</footer>
+
+<script>
+const audios = [
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0007.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0008.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0009.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0010.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0011.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0012.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0013.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0014.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0015.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0016.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0017.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0018.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0019.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0020.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0021.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0022.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0023.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0024.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/AUD-20260412-WA0025.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya1.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya2.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya3.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya4.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya5.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya6.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya7.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya8.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya9.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya10.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya11.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya12.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya13.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya14.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya15.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya16.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya17.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya18.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya19.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya20.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya21.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya22.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya23.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya24.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya25.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya26.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya27.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya28.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya29.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya30.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya31.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya32.opus",
+"https://raw.githubusercontent.com/emamulk63-design/Joyavoice/main/joya33.opus"
+];
+const c=document.getElementById('audioList');
+audios.forEach((a,i)=>{
+ c.innerHTML += `<div class="card"><div class="title">গরম আলোচনা ${i+1} - এখনই শুনুন</div><audio controls preload="none"><source src="${a}" type="audio/ogg; codecs=opus"></audio></div>`;
+});
+</script>
+</body>
+</html>
